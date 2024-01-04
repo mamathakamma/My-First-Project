@@ -1,0 +1,21 @@
+<template>
+		<div class="container slds-float_right">
+				<template if:false={isInvoiceGenerated}>
+            <lightning-button 
+                label="Generate Invoice"
+						   style='margin-right:17px' 
+							icon-name="utility:email" 
+                onclick={generateInvoice} >
+            </lightning-button>
+						 <lightning-button  label="Resend Invoice"   style='margin-right:17px' icon-name="utility:retweet" onclick={handleResendInvoice}></lightning-button>
+						
+           
+
+        </template>
+        <template if:true={isInvoiceGenerated}>
+            <p>Invoice has been generated.</p>
+        </template>
+				
+		</div>
+		
+</template>
